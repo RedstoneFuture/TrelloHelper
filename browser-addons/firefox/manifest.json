@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "TrelloHelper",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A Firefox add-on that adds small, useful features to help with your day-to-day work on Trello.",
   "permissions": [
     "webRequest",

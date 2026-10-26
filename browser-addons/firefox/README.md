@@ -1,6 +1,6 @@
 # TrelloHelper
 
-**Version:** 0.1.0  
+**Version:** 0.2.0  
 **Platform:** Firefox  
 **Manifest:** Version 2  
 **Developed and designed by:** [Rauh-Solutions](https://rauh-solutions.de/)
