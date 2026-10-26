@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "TrelloHelper",
-  "version": "0.0.1-Snapshot",
+  "version": "0.1.0",
   "description": "Opens Trello links in the desktop app instead of a web browser window.",
   "permissions": [
     "webRequest",
