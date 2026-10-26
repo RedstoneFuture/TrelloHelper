@@ -2,16 +2,32 @@
   "manifest_version": 2,
   "name": "TrelloHelper",
   "version": "0.1.0",
-  "description": "Opens Trello links in the desktop app instead of a web browser window.",
+  "description": "A Firefox add-on that adds small, useful features to help with your day-to-day work on Trello.",
   "permissions": [
     "webRequest",
     "webRequestBlocking",
-    "*://trello.com/*"
+    "storage",
+    "menus",
+    "https://trello.com/*",
+    "https://www.trello.com/*"
   ],
   "background": {
     "scripts": [
       "background.js"
     ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "32": "icons/trellohelper-32.png",
+      "48": "icons/trellohelper-48.png",
+      "96": "icons/trellohelper-96.png",
+      "128": "icons/trellohelper-128.png"
+    },
+    "default_title": "TrelloHelper — click to toggle Link Redirect; right-click for settings"
+  },
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
   },
   "browser_specific_settings": {
     "gecko": {

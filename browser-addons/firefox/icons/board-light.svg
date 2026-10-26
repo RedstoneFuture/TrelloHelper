@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 128 128" role="img" aria-label="Trello board icon">
+  <!-- Pale tile matches the card icon while the rounded frame follows board design 2. -->
+  <rect x="2" y="2" width="124" height="124" rx="26" fill="#E6F2FF"/>
+  <!-- Three clear columns fill the tile more fully while preserving the light style. -->
+  <rect x="11" y="25" width="106" height="78" rx="13" fill="#FFFFFF" stroke="#0C66E4" stroke-width="4"/>
+  <rect x="16" y="30" width="31" height="68" rx="7" fill="#FFFFFF" stroke="#D8E9FC" stroke-width="1.5"/>
+  <rect x="48.5" y="30" width="31" height="68" rx="7" fill="#FFFFFF" stroke="#D8E9FC" stroke-width="1.5"/>
+  <rect x="81" y="30" width="31" height="68" rx="7" fill="#FFFFFF" stroke="#D8E9FC" stroke-width="1.5"/>
+  <!-- Three card markers per column suggest boards with several cards. -->
+  <rect x="20" y="38" width="23" height="7" rx="3.5" fill="#9FC8F5"/>
+  <rect x="20" y="49" width="18" height="7" rx="3.5" fill="#C4DDF8"/>
+  <rect x="20" y="60" width="21" height="7" rx="3.5" fill="#9FC8F5"/>
+  <rect x="52.5" y="38" width="23" height="7" rx="3.5" fill="#16A765"/>
+  <rect x="52.5" y="49" width="18" height="7" rx="3.5" fill="#C4DDF8"/>
+  <rect x="52.5" y="60" width="21" height="7" rx="3.5" fill="#9FC8F5"/>
+  <rect x="85" y="38" width="23" height="7" rx="3.5" fill="#9FC8F5"/>
+  <rect x="85" y="49" width="18" height="7" rx="3.5" fill="#C4DDF8"/>
+  <rect x="85" y="60" width="21" height="7" rx="3.5" fill="#9FC8F5"/>
+</svg>

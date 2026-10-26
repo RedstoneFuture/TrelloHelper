@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 128 128" role="img" aria-label="Trello card icon">
+  <!-- Pale tile matches the light icon family used in the settings page. -->
+  <rect x="2" y="2" width="124" height="124" rx="26" fill="#E6F2FF"/>
+  <!-- Enlarged card body keeps the card recognizable when displayed at small sizes. -->
+  <rect x="12" y="16" width="104" height="96" rx="15" fill="#FFFFFF" stroke="#0C66E4" stroke-width="4"/>
+  <!-- Text lines and green label echo the selected light card concept. -->
+  <rect x="22" y="33" width="79" height="14" rx="7" fill="#8BBDF2"/>
+  <rect x="22" y="54" width="53" height="14" rx="7" fill="#8BBDF2"/>
+  <rect x="22" y="79" width="31" height="11" rx="5.5" fill="#1FAD70"/>
+</svg>

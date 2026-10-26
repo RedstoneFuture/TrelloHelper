@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TrelloHelper Settings</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../icons/trellohelper-32.png">
+  <link rel="stylesheet" href="options.css">
+  <script src="options.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <img class="brand-logo" src="../icons/trellohelper.svg" alt="TrelloHelper icon">
+      <div>
+        <div class="header-meta">
+          <p class="eyebrow">FIREFOX ADD-ON</p>
+          <span class="version-pill" aria-label="Version 0.1.0">v0.1.0</span>
+        </div>
+        <h1>TrelloHelper</h1>
+        <p class="subtitle">A Firefox add-on that adds small, useful features to help with your day-to-day work on Trello. - Open-source, lightweight and personally tested.</p>
+      </div>
+    </header>
+
+    <div class="feature-group-heading">
+      <h2>Trello Link Redirect</h2>
+      <p>Automatically send supported Trello card and board links to the <a href="https://trello.com/platforms" target="_blank" rel="noopener noreferrer">Trello desktop app</a> instead of opening them in Firefox. The desktop app must be installed on this PC for this feature to work.</p>
+    </div>
+
+    <section class="card primary-setting" aria-labelledby="automaticRedirectHeading">
+      <div class="section-heading">
+        <div>
+          <p class="setting-kicker">MAIN FEATURE CONTROL</p>
+          <h2 id="automaticRedirectHeading">Automatic redirect</h2>
+          <p>This is the master switch for the redirect rules below.</p>
+        </div>
+        <span id="enabledBadge" class="status-badge">Enabled</span>
+      </div>
+      <label class="switch-row primary-switch-row" for="enabled">
+        <span>
+          <strong>Enable automatic redirect</strong>
+          <small>When enabled, the rules below decide which Trello pages open in the desktop app. When disabled, Trello links stay in Firefox.</small>
+        </span>
+        <input id="enabled" type="checkbox" class="switch" aria-describedby="desktopAppRequirement">
+      </label>
+      <p class="primary-footnote" id="desktopAppRequirement"><span class="requirement-dot" aria-hidden="true"></span>Requires the <a class="subtle-link" href="https://trello.com/platforms" target="_blank" rel="noopener noreferrer">Trello desktop app</a> to be installed on this PC.</p>
+    </section>
+
+    <section class="card">
+      <div class="section-heading">
+        <div>
+          <h2>Rules by page type</h2>
+          <p>Rules apply to new navigations to trello.com and www.trello.com.</p>
+        </div>
+      </div>
+
+      <label class="rule-row" for="redirectCards">
+        <img class="rule-icon" src="../icons/card-light.svg" alt="" aria-hidden="true">
+        <span class="rule-text">
+          <strong>Cards</strong>
+          <small>URLs such as <code>trello.com/c/…</code></small>
+        </span>
+        <input id="redirectCards" type="checkbox" class="checkbox">
+      </label>
+
+      <label class="rule-row" for="redirectBoards">
+        <img class="rule-icon" src="../icons/board-light.svg" alt="" aria-hidden="true">
+        <span class="rule-text">
+          <strong>Boards</strong>
+          <small>URLs such as <code>trello.com/b/…</code></small>
+        </span>
+        <input id="redirectBoards" type="checkbox" class="checkbox">
+      </label>
+
+      <div class="other-rule">
+        <label for="otherPages"><strong>Other Trello pages</strong></label>
+        <select id="otherPages">
+          <option value="browser">Open in browser (recommended)</option>
+          <option value="app">Send to desktop app</option>
+        </select>
+        <p class="hint">Support for other pages depends on whether the installed Trello app accepts their URL format.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-heading">
+        <div>
+          <h2>Close the Firefox tab</h2>
+          <p>Control whether the original tab closes after the desktop app is launched.</p>
+        </div>
+        <span id="closeTabBadge" class="status-badge">Enabled</span>
+      </div>
+      <label class="switch-row" for="closeTabOnFocusLoss">
+        <span>
+          <strong>Close tab when Firefox loses focus</strong>
+          <small>The tab closes after Firefox loses focus, with a short safeguard against window switching.</small>
+        </span>
+        <input id="closeTabOnFocusLoss" type="checkbox" class="switch">
+      </label>
+    </section>
+
+    <div class="footer">
+      <p id="saveStatus" role="status" aria-live="polite">Changes are saved automatically.</p>
+      <button id="resetButton" type="button" class="secondary-button">Restore defaults</button>
+    </div>
+
+    <p class="note"><strong>Note:</strong> Link redirection preserves the current conversion approach by replacing <code>https://</code> with <code>trello://</code>. Firefox usually asks for permission the first time you open an external Trello link.</p>
+
+    <footer class="site-footer">
+      <p class="attribution">Developed and designed by <a href="https://rauh-solutions.de/" target="_blank" rel="noopener noreferrer">Rauh-Solutions</a></p>
+      <p class="disclaimer">TrelloHelper is an independent project. It is not affiliated with, endorsed by, or an official add-on of Atlassian or Trello.</p>
+    </footer>
+  </main>
+</body>
+</html>
