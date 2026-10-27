@@ -1,11 +1,10 @@
 # TrelloHelper
 
 **Version:** 0.2.0  
-**Platform:** Firefox  
-**Manifest:** Version 2  
-**Developed and designed by:** [Rauh-Solutions](https://rauh-solutions.de/)
+**Platform:** Firefox (Manifest: Version 2)  
+**Developed and designed by:** [RedstoneFuture](https://github.com/RedstoneFuture) ([rauh-solutions.de](https://rauh-solutions.de)), [game_crash](https://github.com/gamecrash534)
 
-TrelloHelper is an independent Firefox add-on that adds small, useful features to help with your day-to-day work on Trello. It is open-source, lightweight, and personally tested. The project is designed to grow over time as more features are added.
+TrelloHelper is an independent Firefox add-on that adds small, useful features to help with your day-to-day work on Trello. It is open-source, lightweight, and personally tested. The project is designed in such a way that it can be expanded with new features over time.
 
 ## Features
 
@@ -75,8 +74,6 @@ Temporary add-ons are removed when Firefox closes. For normal installation in a 
 - The focus-based tab-closing option detects whether Firefox has lost focus. It cannot confirm that Trello itself successfully opened or received focus.
 - The extension retains the current URL conversion method (`https://` to `trello://`). Support for specific URL formats depends on the installed Trello desktop app.
 
-## Attribution and disclaimer
-
-TrelloHelper is developed and designed by [Rauh-Solutions](https://rauh-solutions.de/).
+## Disclaimer
 
 TrelloHelper is an independent project. It is not affiliated with, endorsed by, or an official add-on of Atlassian or Trello.
