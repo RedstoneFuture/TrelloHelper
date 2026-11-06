@@ -1,61 +1,46 @@
 # TrelloHelper
 
 **Version:** 0.2.0  
-**Platform:** Firefox (Manifest: Version 2)  
+**Platform:** Mozilla Firefox (Add-on Manifest V2)  
 **Developed and designed by:** [RedstoneFuture](https://github.com/RedstoneFuture) ([rauh-solutions.de](https://rauh-solutions.de)), [game_crash](https://github.com/gamecrash534)
 
-TrelloHelper is an independent Firefox add-on that adds small, useful features to help with your day-to-day work on Trello. It is open-source, lightweight, and personally tested. The project is designed in such a way that it can be expanded with new features over time.
+**» Firefox Add-on Page:** https://addons.mozilla.org/de/firefox/addon/trellohelper
+
+TrelloHelper is an independent Firefox add-on that adds small, useful features to help with your day-to-day work with the task management software "Trello" by Atlassian. This add-on is open-source, lightweight, and personally tested. The project is designed in such a way that it can be expanded with new features over time.
 
 ## Features
 
 ### Trello Link Redirect
 
-Trello Link Redirect intercepts top-level HTTPS navigations to `trello.com` and `www.trello.com`. It classifies each URL as a card link (`/c/...`), board link (`/b/...`), or another Trello page, then applies the user's configured rule.
+If you have installed the [Trello desktop app](https://trello.com/platforms) on your computer, Trello links beginning with `https://` do not open in the desktop app by default. This add-on feature resolves this issue by redirecting Trello links to `trello://`, which are usually detected by the desktop app.
 
-By default, card and board links are sent to the desktop app, while other Trello pages stay in Firefox. The feature is intended for systems where the Trello desktop application is installed. Without the desktop app, external links may not open as expected. The extension preserves the original path, query string, and fragment by replacing only the `https://` scheme with `trello://`. The installed desktop app must support the resulting URL format. Firefox usually asks for permission the first time an external Trello link is opened.
+> [!NOTE]  
+> Firefox usually asks for permission the first time an external Trello link is opened.
 
-## Configuration
+> [!WARNING]  
+> The feature is intended for systems where the [Trello desktop app](https://trello.com/platforms) is installed. Without the desktop app, external links may not open as expected!
 
-Click the TrelloHelper toolbar button to enable or disable automatic redirection. The `ON` or `OFF` badge indicates the current state. Right-click the toolbar button and choose **Open TrelloHelper settings…** to configure the Link Redirect feature.
+#### How it works
+
+Trello Link Redirect intercepts top-level HTTPS navigations to `trello.com` and `www.trello.com`. It classifies each URL as a card link (`/c/…`), board link (`/b/…`), or another Trello page, then applies the user's configured rule. The extension preserves the original path, query string, and fragment by replacing only the `https://` scheme with `trello://`.
+
+## Settings
+
+The add-on provides a settings page so that it can be configured as required and features can be enabled or disabled.
+
+![Screenshots: Settings](screenshots/Settings_2026-11-06.png)
+
+Click the TrelloHelper toolbar button to enable or disable automatic redirection. The `ON` or `OFF` badge indicates the current state. Right-click the toolbar button and choose **Open TrelloHelper settings…** to configure the add-on feature.
 
 The settings page lets you:
 
-- Enable or disable automatic redirection.
-- Choose whether card links should open in the desktop app.
-- Choose whether board links should open in the desktop app.
-- Choose whether other Trello pages should open in the desktop app or remain in Firefox.
-- Close the original Firefox tab after Firefox loses focus, with a short safeguard delay.
+- Trello Link Redirect: Enable or disable automatic redirection.
+- Trello Link Redirect: Choose whether card links should open in the desktop app.
+- Trello Link Redirect: Choose whether board links should open in the desktop app.
+- Trello Link Redirect: Choose whether other Trello pages should open in the desktop app or remain in Firefox.
+- Trello Link Redirect: Close the original Firefox tab after Firefox loses focus, with a short safeguard delay.
 
 Preferences are saved locally using `browser.storage.local`. The extension does not send preferences or browsing data to an external server.
-
-## Project structure
-
-```text
-TrelloHelper/
-├── manifest.json
-├── background.js
-├── README.md
-├── icons/
-│   ├── trellohelper.svg
-│   ├── trellohelper-32.png
-│   ├── trellohelper-48.png
-│   ├── trellohelper-64.png
-│   ├── trellohelper-96.png
-│   ├── trellohelper-128.png
-│   ├── card-light.svg
-│   └── board-light.svg
-└── options/
-    ├── options.html
-    ├── options.css
-    └── options.js
-```
-
-- `manifest.json` defines extension metadata, permissions, toolbar icons, and the settings page.
-- `background.js` handles URL classification, redirects, the toolbar toggle, settings synchronization, and focus-based tab closing.
-- `icons/trellohelper.svg` is the scalable main logo used on the settings page. PNG variants are used for the Firefox toolbar, while `card-light.svg` and `board-light.svg` are scalable vector icons for the Cards and Boards redirect rules. Their SVG artwork remains crisp at different display sizes; the board icon shows three card markers per column.
-- `options/options.html` defines the settings page structure.
-- `options/options.css` styles the settings page, including light and dark themes.
-- `options/options.js` loads, validates, displays, and saves preferences.
 
 ## Temporary installation for testing
 
