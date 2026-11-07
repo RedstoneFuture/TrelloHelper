@@ -28,7 +28,7 @@ Trello Link Redirect intercepts top-level HTTPS navigations to `trello.com` and 
 
 The add-on provides a settings page so that it can be configured as required and features can be enabled or disabled.
 
-![Screenshots: Settings](screenshots/Settings_2026-11-06.png)
+![Screenshots: Settings](browser-addons/firefox/screenshots/Settings_2026-11-06.png)
 
 Click the TrelloHelper toolbar button to enable or disable automatic redirection. The `ON` or `OFF` badge indicates the current state. Right-click the toolbar button and choose **Open TrelloHelper settings…** to configure the add-on feature.
 
@@ -46,7 +46,7 @@ Preferences are saved locally using `browser.storage.local`. The extension does 
 
 1. Extract the ZIP archive to a folder.
 2. Open Firefox and navigate to `about:debugging#/runtime/this-firefox`.
-3. Click **Load Temporary Add-on…** and select the project's `manifest.json` file.
+3. Click **Load Temporary Add-on…** and select the project's `browser-addons/firefox/manifest.json` file.
 4. Click the TrelloHelper toolbar button to toggle automatic redirection.
 5. Right-click the toolbar button and select **Open TrelloHelper settings…** to open the settings page.
 
