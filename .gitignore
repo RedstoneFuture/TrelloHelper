@@ -1,57 +1,162 @@
-# --------------------------------------------------------
-# Custom '.gitignore' Template v. 0.1
-# --------------------------------------------------------
+# ============================================================
+# Java / Maven Project - .gitignore
+# Version 1.1
+# ============================================================
 
-# === Maven Specific ===
-# Target directory where compiled classes and build artifacts are stored
+# ------------------------------------------------------------
+# Maven
+# ------------------------------------------------------------
+
+# Maven build output (including multi-module projects)
 target/
 
-# Temporary files created during Maven builds
+# Maven release and versioning files
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
 pom.xml.next
 release.properties
-dependency-reduced-pom.xml
 buildNumber.properties
 
-# Maven wrapper binary (should not be committed, it can be downloaded)
-.mvn/wrapper/maven-wrapper.jar
+# Maven Shade Plugin generated POM
+dependency-reduced-pom.xml
 
-# Timing properties from Maven builds
+# Maven build timing information
 .mvn/timing.properties
 
-# === IDE Specific ===
-# IntelliJ IDEA project files and configurations
-.idea/          # IntelliJ IDEA project folder (includes settings, caches, etc.)
-*.iml           # IntelliJ module files
+# ------------------------------------------------------------
+# Java
+# ------------------------------------------------------------
 
-# Eclipse project files
-.settings/      # Eclipse settings folder
-.classpath      # Eclipse classpath configuration
-.project        # Eclipse project configuration
+# Compiled Java classes
+*.class
 
-# === Operating System Specific ===
-# macOS Finder metadata files
-.DS_Store
-
-# Windows Thumbs.db cache
-Thumbs.db
-
-# === Log and Backup Files ===
-# Logs and temporary files
-*.log           # Log files
-*.bak           # Backup files
-*.swp           # Swap files created by editors
-
-# === Build Tools ===
-# Gradle build folder
-build/
-
-# === Java Generated Files ===
-# JAR files (compiled Java libraries)
+# Compiled Java archives
+# Also ignores the optional Maven Wrapper JAR.
 *.jar
-# WAR files (web application archives)
 *.war
-# EAR files (enterprise application archives)
 *.ear
+
+# Uncomment to include the Maven Wrapper JAR in version control
+# !.mvn/wrapper/maven-wrapper.jar
+
+# Java virtual machine crash logs
+hs_err_pid*
+replay_pid*
+
+# ------------------------------------------------------------
+# IntelliJ IDEA
+# ------------------------------------------------------------
+
+# IntelliJ project configuration
+.idea/
+
+# IntelliJ module and project files
+*.iml
+*.ipr
+*.iws
+
+# IntelliJ compiler output
+out/
+
+# ------------------------------------------------------------
+# Eclipse
+# ------------------------------------------------------------
+
+# Eclipse project configuration
+.project
+.classpath
+.settings/
+
+# Eclipse compiler output
+bin/
+
+# ------------------------------------------------------------
+# NetBeans
+# ------------------------------------------------------------
+
+# NetBeans private project configuration
+/nbproject/private/
+
+# NetBeans build output
+/build/
+/nbbuild/
+/dist/
+/nbdist/
+
+# ------------------------------------------------------------
+# Visual Studio Code
+# ------------------------------------------------------------
+
+# Uncomment to ignore local VS Code workspace settings
+# .vscode/
+# *.code-workspace
+
+# ------------------------------------------------------------
+# Operating System Files
+# ------------------------------------------------------------
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100/
+.Trashes/
+
+# ------------------------------------------------------------
+# Logs and Debugging
+# ------------------------------------------------------------
+
+# Log files and directories
+*.log
+logs/
+
+# Debug and diagnostic output
+*.dump
+*.trace
+
+# ------------------------------------------------------------
+# Temporary Files and Backups
+# ------------------------------------------------------------
+
+# Temporary and editor files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Backup and patch files
+*.bak
+*.old
+*.orig
+*.rej
+*~
+
+# ------------------------------------------------------------
+# Environment and Secrets
+# ------------------------------------------------------------
+
+# Environment variable files
+.env
+.env.*
+!.env.example
+
+# Private keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# ------------------------------------------------------------
+# End of .gitignore
+# ============================================================
